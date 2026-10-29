@@ -99,3 +99,21 @@
 //     }
 // }
 // доп задание
+Console.Write("введите целое положительное число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+if (num <= 0) {
+    Console.WriteLine("число должно быть положительным");
+    return;
+}
+int sum = 0;      
+int count = 0;    
+while (num > 0) {
+   
+    int last = num % 10;
+    sum += last;    
+    count++;             
+     
+    num /= 10;
+}
+Console.WriteLine($"сумма: {sum}");
+Console.WriteLine($"колич: {count}");
